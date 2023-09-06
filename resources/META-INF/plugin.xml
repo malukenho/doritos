@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>Doritos</id>
+    <name>Doritos</name>
+    <version>0.1.0</version>
+    <vendor email="malukenho.dev [at] gmail.com">Jefersson Nathan</vendor>
+    <category>Misc</category>
+
+    <idea-version since-build="211.7442.40"/>
+
+    <description>
+        <![CDATA[
+        <html lang="en">
+        <body>
+        This plugin unites on itself a lot of useful things to enhance daily development activities.
+        </body>
+        </html>
+        ]]>
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.vcs</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <registryKey key="quickfix-plugin.intentionPriorities" defaultValue="" description="..."/>
+    </extensions>
+
+    <actions>
+        <action id="CommitOnSaveAction" class="doritos.common.vcs.CommitOnSaveAction" text="Commit on save"/>
+        <action class="doritos.common.QuickFixAction" text="Quick Fix">
+            <keyboard-shortcut first-keystroke="F1" keymap="$default"/>
+        </action>
+    </actions>
+</idea-plugin>
